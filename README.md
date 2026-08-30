@@ -31,7 +31,7 @@ The pipeline is divided into three dedicated Python scripts to separate concerns
 
 ## ⚙️ Installation & Setup
  * Clone the repository
-   git clone https://github.com/yourusername/openalex-quantum-exp
+   git clone https://github.com/TariqZJawad/OpenAlex-Quantum-API-Research-Pipeline-Project
 cd openalex-quantum-explorer
 
  * Set up a virtual environment
