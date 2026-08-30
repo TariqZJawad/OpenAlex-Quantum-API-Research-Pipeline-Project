@@ -6,6 +6,11 @@ import plotly.graph_objects as go
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from datetime import datetime
+import os
+import zipfile
+if not os.path.exists('openalex_data.db')
+    with zipfile.ZipFile('openalex_data.zip', 'r') as zip_ref:
+        zip.ref.extractall('.')
 
 st.set_page_config(
     page_title="OpenAlex Quantum Research Dashboard",
