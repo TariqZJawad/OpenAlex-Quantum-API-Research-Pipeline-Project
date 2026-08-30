@@ -8,7 +8,13 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 import os
 import zipfile
+import glob
 if not os.path.exists('openalex_data.db')
+    path_files = sorted(glob.glob('db_part_*')
+    with open('openalex_data.zip', 'wb') as output_file:
+        for part in part_files:
+            with open(part, 'rb') as input_file:
+                output_file.write(input_file.read())
     with zipfile.ZipFile('openalex_data.zip', 'r') as zip_ref:
         zip.ref.extractall('.')
 
