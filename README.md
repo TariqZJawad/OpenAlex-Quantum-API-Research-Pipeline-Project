@@ -32,6 +32,7 @@ The pipeline is divided into three dedicated Python scripts to separate concerns
 ## ⚙️ Installation & Setup
  * Clone the repository
    git clone https://github.com/TariqZJawad/OpenAlex-Quantum-API-Research-Pipeline-Project
+   
 cd openalex-quantum-explorer
 
  * Set up a virtual environment
@@ -47,6 +48,7 @@ python3 qrt.py   # Clean and transform
 streamlit run qrl.py  # Launch the dashboard
 
 ## 📊 Data Visualizations (Rethinking the Metrics)
+> [you can review the vis app by streamlit](https://openalex-quantum-api-research-pipeline-project.streamlit.app/)
 1. Evolution of Top Concepts Over Years (Area Chart)
 Visualizing the volume of specific concepts over time highlights the "momentum" of a research topic. This helps identify whether a niche like "Quantum Batteries" is an emerging trend, peaking, or plateauing, guiding future research focus.
 ![review](./area.png)
