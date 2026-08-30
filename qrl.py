@@ -10,7 +10,7 @@ import os
 import zipfile
 import glob
 if not os.path.exists('openalex_data.db'):
-    path_files = sorted(glob.glob('db_part_*')
+    path_files = sorted(glob.glob('db_part_*'))
     with open('openalex_data.zip', 'wb') as output_file:
         for part in part_files:
             with open(part, 'rb') as input_file:
