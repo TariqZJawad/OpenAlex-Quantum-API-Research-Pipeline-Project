@@ -1,9 +1,6 @@
-matplotlib
-numpy
+streamlit
 pandas
 plotly
-requests
-streamlit
 wordcloud
-os
-zipfile
+matplotlib
+requests
