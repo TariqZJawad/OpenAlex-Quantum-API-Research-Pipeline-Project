@@ -1,0 +1,7 @@
+matplotlib==3.6.3
+numpy==1.26.4
+pandas==2.1.4+dfsg
+plotly==5.15.0
+requests==2.31.0
+streamlit==1.62.0
+wordcloud==1.9.3+dfsg
