@@ -20,17 +20,18 @@ The pipeline is divided into three dedicated Python scripts to separate concerns
  * Extraction (qre.py): Establishes the API connection, dynamically creates the normalized relational tables (if they do not exist), and executes an automated loop to fetch paginated data. It securely parses authors, institutions, concepts, and references, mapping them into the database while avoiding duplicates.
  * Transformation & Cleaning (qrt.py): Scrubs the raw database. It strips URL prefixes to isolate pure entity IDs, standardizes publication date formats, removes orphaned relationships, and reconstructs inverted-index JSON abstracts into fully readable text blocks for literature review.
  * Loading & Visualization (qrl.py): Connects to the optimized SQLite database, applies user-selected filters (search queries and year ranges) via Pandas, and dynamically renders the analytical dashboard without re-querying the external API.
+![review](./workflow.png)
 ## ✨ Features
  * Fault-Tolerant Scraping: Resumes downloads from exact checkpoints without duplicating data if the API rate limit is hit or the connection drops.
  * Complex Relational Mapping: Handles many-to-many relationships across 7 specialized tables.
  * Abstract Reconstruction: Automatically decodes and rebuilds fragmented OpenAlex abstracts into human-readable literature summaries.
  * Foundational Knowledge Tree: A unique algorithm that traces the historical and hierarchical roots of any scientific concept.
 ## 🗄️ Database Schema
-![database scema](.\qrt_diagram.png)
+![database scema](./qrt_diagram.png)
 
 ## ⚙️ Installation & Setup
  * Clone the repository
-   git clone https://github.com/yourusername/openalex-quantum-explorer.git
+   git clone https://github.com/yourusername/openalex-quantum-exp
 cd openalex-quantum-explorer
 
  * Set up a virtual environment
@@ -48,16 +49,16 @@ streamlit run qrl.py  # Launch the dashboard
 ## 📊 Data Visualizations (Rethinking the Metrics)
 1. Evolution of Top Concepts Over Years (Area Chart)
 Visualizing the volume of specific concepts over time highlights the "momentum" of a research topic. This helps identify whether a niche like "Quantum Batteries" is an emerging trend, peaking, or plateauing, guiding future research focus.
-[Insert Area Chart Image Here]
-2. Top Active Institutions (Horizontal Bar Chart)
+![review](./area.png)
+3. Top Active Institutions (Horizontal Bar Chart)
 By mapping publication volume against the average "Concept Level," this chart doesn't just show who publishes the most, but who publishes the most fundamental (low-level) vs. applied (high-level) research. This is directly used to shortlist potential universities for graduate studies.
-[Insert Bar Chart Image Here]
-3. Concepts Word Cloud
+![review](./hbar.png)
+4. Concepts Word Cloud
 Provides an immediate, intuitive snapshot of the dominant themes within a filtered subset of papers, allowing for rapid topical orientation.
-[Insert Word Cloud Image Here]
-4. Institutions vs. Concepts Heatmap
+![review](./wordcloud.png)
+5. Institutions vs. Concepts Heatmap
 This matrix precisely cross-references research hubs with specific scientific concepts. It answers the critical question: "Which exact institution should I target if I want to specialize in 'Quantum Error Correction'?"
-[Insert Heatmap Image Here]
+![review](./heatmap.png)
 ## 🌱 The Foundational Knowledge Tree
 The Knowledge Tree is a custom feature designed specifically for conducting efficient literature reviews. By searching for a core concept, the algorithm fetches the relevant papers and sorts them starting from the lowest level (the most fundamental physics) and the oldest publication_date.
 It generates sequential literature boxes containing the title, authors, institutions, concept scores, and an expandable reconstructed abstract. This allows a researcher to trace the pure historical roots of an idea, read how it was initially defined, and follow its progression up to modern applications—an invaluable tool for effortlessly identifying research gaps.
