@@ -71,4 +71,4 @@ This project is a functional prototype for a much larger vision: the creation of
  * B.Sc. in Physics, Analytics
  * 💼 LinkedIn: [Profile Link](https://www.linkedin.com/in/tariq-jawad?utm_source=share_via&utm_content=profile&utm_medium=member_android)
  * 🐙 GitHub: [Repository](https://github.com/TariqZJawad?tab=repositories)
- * ✉️ Email: tzyad3763@gmail.com
+ * ✉️ Email: contact@tariqjawad.com
